@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:udaskinapp/myorder.dart';
+import 'package:udaskinapp/status_order.dart';
 
 class DetailOrder extends StatefulWidget {
   const DetailOrder({super.key});
@@ -122,7 +123,9 @@ class _DetailOrderState extends State<DetailOrder> {
                 trailing: Text('\$520.00', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
               ),
               SizedBox(height: 20),
-              ElevatedButton(onPressed: (){},
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => StatusOrder()));
+              },
                 child: Text('Buy again', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(double.infinity, 50),

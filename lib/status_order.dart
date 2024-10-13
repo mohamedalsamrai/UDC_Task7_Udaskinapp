@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:udaskinapp/home.dart';
+import 'package:udaskinapp/menu_tab_bar.dart';
 
 class StatusOrder extends StatefulWidget {
   const StatusOrder({super.key});
@@ -18,7 +19,7 @@ class _StatusOrderState extends State<StatusOrder> {
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                context, MaterialPageRoute(builder: (context) => MenuTabBar()));
           },
         ),
         title: const Text(

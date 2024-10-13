@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:udaskinapp/myorder.dart';
+import 'package:udaskinapp/profil_screen.dart';
 
 class Riviwers extends StatefulWidget {
   const Riviwers({super.key});
@@ -18,7 +19,7 @@ class _RiviwersState extends State<Riviwers> {
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Myorder()));
+                context, MaterialPageRoute(builder: (context) => ProfilScreen()));
           },
         ),
         title: Text(

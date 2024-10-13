@@ -25,7 +25,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
       leading: IconButton(
         icon: Icon(Icons.arrow_back_ios),
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilScreen()));
+          Navigator.pop(context);
         },
       ),
         title: const Column(
