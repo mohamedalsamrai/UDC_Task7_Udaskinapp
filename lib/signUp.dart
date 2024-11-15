@@ -22,8 +22,7 @@ class _SignupState extends State<Signup> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
           onPressed: () {
-            Navigator.push(
-                context,
+            Navigator.push(context,
                 MaterialPageRoute(builder: (context) => WelcomeScreen()));
           },
         ),
@@ -51,7 +50,8 @@ class _SignupState extends State<Signup> {
                   color: Colors.grey.withOpacity(0.3),
                   borderRadius: BorderRadius.circular(30),
                 ),
-                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                 child: const TextField(
                   decoration: InputDecoration(
                     border: InputBorder.none,
@@ -65,7 +65,8 @@ class _SignupState extends State<Signup> {
                   color: Colors.grey.withOpacity(0.3),
                   borderRadius: BorderRadius.circular(30),
                 ),
-                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                 child: const TextField(
                   decoration: InputDecoration(
                     border: InputBorder.none,
@@ -80,9 +81,11 @@ class _SignupState extends State<Signup> {
                   color: Colors.grey.withOpacity(0.3),
                   borderRadius: BorderRadius.circular(30),
                 ),
-                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                 child: TextField(
-                  obscureText: !_isPasswordVisible, // Obscure text based on _isPasswordVisible
+                  obscureText:
+                      !_isPasswordVisible, // Obscure text based on _isPasswordVisible
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: 'Password',
@@ -94,7 +97,8 @@ class _SignupState extends State<Signup> {
                       ),
                       onPressed: () {
                         setState(() {
-                          _isPasswordVisible = !_isPasswordVisible; // Toggle password visibility
+                          _isPasswordVisible =
+                              !_isPasswordVisible; // Toggle password visibility
                         });
                       },
                     ),
@@ -107,24 +111,25 @@ class _SignupState extends State<Signup> {
                   color: Colors.grey.withOpacity(0.3),
                   borderRadius: BorderRadius.circular(30),
                 ),
-                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                 child: TextField(
                   obscureText: !_isConfirmPasswordVisible,
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: 'Confirm Password',
                     suffixIcon: IconButton(
-                    icon: Icon(
-                        _isConfirmPasswordVisible
-                        ? Icons.visibility
-                            : Icons.visibility_off,
-                    ),
-                      onPressed: () {
-                        setState(() {
-                          _isConfirmPasswordVisible = !_isConfirmPasswordVisible;
-                        });
-                    }
-                    ),
+                        icon: Icon(
+                          _isConfirmPasswordVisible
+                              ? Icons.visibility
+                              : Icons.visibility_off,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            _isConfirmPasswordVisible =
+                                !_isConfirmPasswordVisible;
+                          });
+                        }),
                   ),
                 ),
               ),
@@ -146,7 +151,8 @@ class _SignupState extends State<Signup> {
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Signin()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Signin()));
                 },
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(double.infinity, 50),
@@ -176,11 +182,21 @@ class _SignupState extends State<Signup> {
                 ],
               ),
               const SizedBox(height: 15),
-              OutlinedButton.icon(
+              ElevatedButton.icon(
                 onPressed: () {},
-                icon: const Icon(Icons.g_mobiledata),
-                label: const Text('Sign Up With Google'),
-                style: OutlinedButton.styleFrom(
+                icon: const Icon(
+                  Icons.g_mobiledata,
+                  color: Colors.white,
+                ),
+                label: const Text(
+                  'Sign Up With Google',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.bold),
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
                   minimumSize: const Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25),

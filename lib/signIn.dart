@@ -62,6 +62,7 @@ class _SigninState extends State<Signin> {
                       const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                   child: const TextField(
                     decoration: InputDecoration(
+                      border: InputBorder.none,
                       hintText: 'Email',
                     ),
                   ),
@@ -127,11 +128,21 @@ class _SigninState extends State<Signin> {
                   ],
                 ),
                 const SizedBox(height: 15),
-                OutlinedButton.icon(
+                ElevatedButton.icon(
                   onPressed: () {},
-                  icon: const Icon(Icons.g_mobiledata),
-                  label: const Text('Login With Google'),
-                  style: OutlinedButton.styleFrom(
+                  icon: const Icon(
+                    Icons.g_mobiledata,
+                    color: Colors.white,
+                  ),
+                  label: const Text(
+                    'Login With Google',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
                     minimumSize: const Size(double.infinity, 50),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25),
@@ -154,8 +165,8 @@ class _SigninState extends State<Signin> {
                       child: const Text(
                         'Sign Up',
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.blue,
                         ),
                       ),
                     )
