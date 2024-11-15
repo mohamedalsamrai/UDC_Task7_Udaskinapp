@@ -25,53 +25,72 @@ class WelcomeScreen extends StatelessWidget {
               const Text(
                 'UCARE',
                 style: TextStyle(
-                    fontWeight: FontWeight.w900,
-                    fontSize: 50,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.black87,
+                  fontWeight: FontWeight.w900,
+                  fontSize: 50,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.black87,
                 ),
               ),
               const Text(
                 'Invest in your youthful face',
                 style: TextStyle(
-                  fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600
-                  // shadows: [
-                  //   Shadow(
-                  //     blurRadius: 10.0,
-                  //     color: Colors.black87,
-                  //     offset: Offset(2.0, 2.0),
-                  //   ),
-                  // ],
-                ),
+                    fontSize: 16,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600
+                    // shadows: [
+                    //   Shadow(
+                    //     blurRadius: 10.0,
+                    //     color: Colors.black87,
+                    //     offset: Offset(2.0, 2.0),
+                    //   ),
+                    // ],
+                    ),
               ),
               SizedBox(height: 250),
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Signin()),
+                    context,
+                    MaterialPageRoute(builder: (context) => const Signin()),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 15),
+                  backgroundColor: Color(0xffffffff),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 150, vertical: 15),
                   textStyle: const TextStyle(fontSize: 20),
                 ),
-                child: const Text('Sign In'),
+                child: const Text(
+                  'Sign In',
+                  style: TextStyle(
+                      color: Color(0xff000000),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic),
+                ),
               ),
               const SizedBox(height: 15),
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Signup()),
+                    context,
+                    MaterialPageRoute(builder: (context) => const Signup()),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.greenAccent,
-                  padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 15),
+                  backgroundColor: Colors.black,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 150, vertical: 15),
                   textStyle: const TextStyle(fontSize: 20),
                 ),
-                child: Text('Sign Up'),
+                child: Text(
+                  'Sign Up',
+                  style: TextStyle(
+                      color: Color(0xffffffff),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic),
+                ),
               ),
             ],
           ),
